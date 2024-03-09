@@ -41,7 +41,7 @@ I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEm
 ### ✍️ Top Repositories : 
 - Star Wars Blog with React [-WEB-](https://srzerorequiem.github.io/StarWarBlog/)   [-REPO-](https://github.com/SrZeroRequiem/StarWarBlog)
 - Todo List with REACT [-REPO-](https://github.com/SrZeroRequiem/ToDoReact)
-- - REST API with FLASK [-REPO-](https://github.com/SrZeroRequiem/exercise-family-static-api)
+- REST API with FLASK [-REPO-](https://github.com/SrZeroRequiem/exercise-family-static-api)
 
 <!-- BLOG-POST-LIST:END -->
 
