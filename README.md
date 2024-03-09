@@ -39,8 +39,8 @@ I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEm
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SrZeroRequiem&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 ### ✍️ Top Repositories : 
-- Star Wars Blog with React [Web](https://srzerorequiem.github.io/StarWarBlog/)   [Repo](https://github.com/SrZeroRequiem/StarWarBlog)
-- Todo List with REACT [REPOSITORY](https://github.com/SrZeroRequiem/ToDoReact)
+- Star Wars Blog with React [-WEB-](https://srzerorequiem.github.io/StarWarBlog/)   [-REPO-](https://github.com/SrZeroRequiem/StarWarBlog)
+- Todo List with REACT [-REPO-](https://github.com/SrZeroRequiem/ToDoReact)
 
 <!-- BLOG-POST-LIST:END -->
 
