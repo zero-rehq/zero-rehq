@@ -39,9 +39,9 @@ I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEm
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SrZeroRequiem&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 ### ✍️ Top Repositories : 
-- Star Wars Blog with REACT [-WEB-](https://srzerorequiem.github.io/StarWarBlog/)   [-REPO-](https://github.com/SrZeroRequiem/StarWarBlog)
-- Todo List with REACT [-REPO-](https://github.com/SrZeroRequiem/ToDoReact)
-- REST API with FLASK [-REPO-](https://github.com/SrZeroRequiem/exercise-family-static-api)
+- Star Wars Blog with REACT [-WEB-](https://srzerorequiem.github.io/StarWarBlog/)   [-REPO-](https://github.com/SrZeroRequiem/StarWarBlog)   [-API-](https://github.com/SrZeroRequiem/SwapiExpressJS)  
+- WanderBud  [-WEB-](wanderbud.es)   [-REPO-](https://github.com/SrZeroRequiem/WanderBud)
+- GachaAPI [-REPO-](https://github.com/SrZeroRequiem/GachaAPI)
 
 <!-- BLOG-POST-LIST:END -->
 
