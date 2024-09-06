@@ -12,7 +12,7 @@
 I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Spain.
 
 - 🔭 I’m a Full Stack Developer contributing to frontend and backend for building web applications.
-- 📫 How to reach me: &nbsp; [![Linkedin Badge](https://img.shields.io/badge/-Bruno-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-murua/)
+- 📫 How to reach me: &nbsp; [![Linkedin Badge](https://img.shields.io/badge/-Bruno%20Murua-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-murua/)
 
 ---
 
