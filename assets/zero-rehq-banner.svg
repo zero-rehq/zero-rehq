@@ -1,0 +1,257 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradBrand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#240046"/>
+      <stop offset="45%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#C77DFF"/>
+    </linearGradient>
+    <linearGradient id="gradGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A733FF"/>
+      <stop offset="100%" stop-color="#E0AAFF"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(360deg)}}@keyframes pulse{0%,to{opacity:.55}50%{opacity:1}}@keyframes shimmer{0%{stroke-dashoffset:0}to{stroke-dashoffset:-1600}}.eq{fill:#e0aaff;filter:url(#softGlow)}
+      /* ✨ Animación de encendido tipo espiral */
+  @keyframes spiral-draw {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0.1;
+      filter: drop-shadow(0 0 0px #a733ff);
+    }
+    30% {
+      opacity: 1;
+      filter: drop-shadow(0 0 8px #a733ff);
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      filter: drop-shadow(0 0 12px #a733ff);
+    }
+  }
+
+  /* 🌌 Pulso suave continuo después del encendido */
+  @keyframes soft-pulse {
+    0%, 100% {
+      opacity: 0.6;
+      filter: drop-shadow(0 0 8px #a733ff);
+    }
+    50% {
+      opacity: 1;
+      filter: drop-shadow(0 0 14px #e0aaff);
+    }
+  }
+
+  .ring {
+    stroke: #a733ff;
+    stroke-linecap: round;
+    opacity: 0.8;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  /* cada anillo se enciende con un desfase */
+  .ring.outer {
+    stroke-width: 8;
+    animation:
+      spiral-draw 2s ease-in-out forwards 0.2,
+      soft-pulse 3s ease-in-out infinite 2.2s;
+  }
+
+  .ring.middle {
+    stroke-width: 10;
+    animation:
+      spiral-draw 2s ease-in-out forwards 0.8s,
+      soft-pulse 3s ease-in-out infinite 2.9s;
+  }
+
+  .ring.inner {
+    stroke-width: 12;
+    animation:
+      spiral-draw 2s ease-in-out forwards 1.4s,
+      soft-pulse 3s ease-in-out infinite 3.4s;
+  }
+  .ring.inner-inner {
+    stroke-width: 12;
+    animation:
+      spiral-draw 2s ease-in-out forwards 2s,
+      soft-pulse 3s ease-in-out infinite 4s;
+  }
+  .inner-circle {
+    stroke-width: 12;
+    animation:
+      spiral-draw 2s ease-in-out forwards 2.2s,
+      soft-pulse 3s ease-in-out infinite 4.5s;
+  }
+
+    </style> 
+  </defs>
+  <path style="fill:#10002b" d="M0 0h1200v300H0z"/>
+  <g style="animation:spin 12s linear infinite;transform-origin:150px 150px">
+    <circle
+  cx="150" cy="150" r="95"
+  fill="none"
+  stroke="url(#gradGlow)"
+  stroke-width="5"
+  stroke-linecap="round"
+  stroke-dasharray="300 180">
+  <animate
+    attributeName="stroke-dasharray"
+    values="300 180;150 60;60 20;20 5;0 1"
+    keyTimes="0;0.25;0.5;0.75;1"
+    dur="2.8s"
+    begin="0s"
+    fill="freeze"
+  />
+  <!-- opcional: pequeño movimiento para dar vida -->
+  <animate
+    attributeName="stroke-dashoffset"
+    values="0;40;0"
+    dur="2.8s"
+    begin="0s"
+    fill="freeze"
+  />
+</circle>
+
+     <path
+  class="ring outer"
+  d="M150 72V58m20.188 16.658 3.623-13.523M189 82.45l7-12.124m9.154 24.52 9.9-9.9M217.55 111l12.124-7m-4.332 25.812 13.523-3.623M228 150h14m-16.658 20.188 13.523 3.623M217.55 189l12.124 7m-24.52 9.154 9.9 9.9M189 217.55l7 12.124m-25.812-4.332 3.623 13.523M150 228v14m-20.188-16.658-3.623 13.523M111 217.55l-7 12.124m-9.154-24.52-9.9 9.9M82.45 189l-12.124 7m4.332-25.812-13.523 3.623M72 150H58m16.658-20.188-13.523-3.623M82.45 111l-12.124-7m24.52-9.154-9.9-9.9M111 82.45l-7-12.124m25.812 4.332-3.623-13.523"
+  transform="translate(150,150) scale(0.9) translate(-150,-150)"
+/>
+ <path
+  class="ring middle"
+  d="M150 72V58m20.188 16.658 3.623-13.523M189 82.45l7-12.124m9.154 24.52 9.9-9.9M217.55 111l12.124-7m-4.332 25.812 13.523-3.623M228 150h14m-16.658 20.188 13.523 3.623M217.55 189l12.124 7m-24.52 9.154 9.9 9.9M189 217.55l7 12.124m-25.812-4.332 3.623 13.523M150 228v14m-20.188-16.658-3.623 13.523M111 217.55l-7 12.124m-9.154-24.52-9.9 9.9M82.45 189l-12.124 7m4.332-25.812-13.523 3.623M72 150H58m16.658-20.188-13.523-3.623M82.45 111l-12.124-7m24.52-9.154-9.9-9.9M111 82.45l-7-12.124m25.812 4.332-3.623-13.523"
+  transform="translate(150,150) scale(0.68) translate(-150,-150)"
+/>
+
+<!-- medio -->
+<path
+  class="ring inner"
+  d="M150 72V58m20.188 16.658 3.623-13.523M189 82.45l7-12.124m9.154 24.52 9.9-9.9M217.55 111l12.124-7m-4.332 25.812 13.523-3.623M228 150h14m-16.658 20.188 13.523 3.623M217.55 189l12.124 7m-24.52 9.154 9.9 9.9M189 217.55l7 12.124m-25.812-4.332 3.623 13.523M150 228v14m-20.188-16.658-3.623 13.523M111 217.55l-7 12.124m-9.154-24.52-9.9 9.9M82.45 189l-12.124 7m4.332-25.812-13.523 3.623M72 150H58m16.658-20.188-13.523-3.623M82.45 111l-12.124-7m24.52-9.154-9.9-9.9M111 82.45l-7-12.124m25.812 4.332-3.623-13.523"
+  transform="translate(150,150) scale(0.50) translate(-150,-150)"
+/>
+
+<!-- interior -->
+<path
+  class="ring inner-inner"
+  d="M150 72V58m20.188 16.658 3.623-13.523M189 82.45l7-12.124m9.154 24.52 9.9-9.9M217.55 111l12.124-7m-4.332 25.812 13.523-3.623M228 150h14m-16.658 20.188 13.523 3.623M217.55 189l12.124 7m-24.52 9.154 9.9 9.9M189 217.55l7 12.124m-25.812-4.332 3.623 13.523M150 228v14m-20.188-16.658-3.623 13.523M111 217.55l-7 12.124m-9.154-24.52-9.9 9.9M82.45 189l-12.124 7m4.332-25.812-13.523 3.623M72 150H58m16.658-20.188-13.523-3.623M82.45 111l-12.124-7m24.52-9.154-9.9-9.9M111 82.45l-7-12.124m25.812 4.332-3.623-13.523"
+  transform="translate(150,150) scale(0.37) translate(-150,-150)"
+/>
+
+    <circle
+  class="inner-circle"
+  cx="150" cy="150" r="90"
+  transform="translate(150,150) scale(0.25) translate(-150,-150)"
+  fill="none"
+  stroke="url(#gradGlow)" stroke-width="10" stroke-linecap="round"
+  pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" opacity="0"
+  style="filter:drop-shadow(0 0 8px #a733ff)"
+>
+  <!-- se dibuja y aparece al final -->
+  <animate attributeName="stroke-dashoffset" from="1" to="0" dur="0.7s" begin="2.4s" fill="freeze"/>
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.4s" fill="freeze"/>
+</circle>
+
+    <!-- Segundo path: glitch + dashed -> sólido -->
+<!-- Segundo path: glitch + dashed visible -> sólido estable -->
+<!-- ⚡ Glitch brutal antes de estabilizar -->
+<!-- Grupo que gira al revés como antes -->
+<!-- Glitch hardcore: teleports sin movimiento intermedio + cierre sólido -->
+<g style="animation:spin 12s linear infinite reverse;transform-origin:150px 150px">
+
+  <!-- shard #1 -->
+  <g opacity="0" transform="translate(0,0) rotate(0 150 150)">
+    <animate attributeName="opacity" begin="3.18s" dur="0.01s" from="0" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="3.26s" dur="0.01s" from="1" to="0" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="#A733FF" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="56 36" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" begin="3.18s" dur="0.08s"
+               values="0;220;-120;60;0" keyTimes="0;0.25;0.5;0.75;1" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- shard #2 -->
+  <g opacity="0" transform="translate(16,-12) rotate(3 150 150)">
+    <animate attributeName="opacity" begin="3.28s" dur="0.01s" from="0" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="3.36s" dur="0.01s" from="1" to="0" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="#C77DFF" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="52 30" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" begin="3.28s" dur="0.08s"
+               values="0;-200;140;-60;0" keyTimes="0;0.25;0.5;0.75;1" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- shard #3 -->
+  <g opacity="0" transform="translate(-18,14) rotate(-4 150 150)">
+    <animate attributeName="opacity" begin="3.38s" dur="0.01s" from="0" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="3.46s" dur="0.01s" from="1" to="0" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="#7B2CBF" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="60 38" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" begin="3.38s" dur="0.08s"
+               values="0;260;-140;100;0" keyTimes="0;0.25;0.5;0.75;1" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- shard #4 -->
+  <g opacity="0" transform="translate(12,18) rotate(6 150 150)">
+    <animate attributeName="opacity" begin="3.48s" dur="0.01s" from="0" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="3.56s" dur="0.01s" from="1" to="0" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="#E0AAFF" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="48 28" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" begin="3.48s" dur="0.08s"
+               values="0;-180;120;-80;0" keyTimes="0;0.25;0.5;0.75;1" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- shard #5 -->
+  <g opacity="0" transform="translate(-20,-16) rotate(-7 150 150)">
+    <animate attributeName="opacity" begin="3.58s" dur="0.01s" from="0" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="3.66s" dur="0.01s" from="1" to="0" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="#A733FF" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="58 34" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" begin="3.58s" dur="0.08s"
+               values="0;240;-160;80;0" keyTimes="0;0.25;0.5;0.75;1" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- FINAL estable (aparece y queda sólido) -->
+  <g opacity="0" transform="translate(0,0) rotate(0 150 150)">
+    <animate attributeName="opacity" begin="3.70s" dur="0.06s" from="0" to="1" fill="freeze"/>
+    <path d="M150,60 A90,90 0 1,1 230,180 L260,210"
+      stroke="url(#gradGlow)" stroke-width="22" fill="none" stroke-linecap="round"
+      transform="translate(150,150) scale(0.15) translate(-150,-150) translate(-84,45)"
+      stroke-dasharray="50 32" stroke-dashoffset="0">
+      <animate attributeName="stroke-dasharray" begin="3.70s" dur="0.35s"
+               values="50 32;26 16;12 10;0 1" fill="freeze"/>
+      <animate attributeName="stroke-dashoffset" begin="3.70s" dur="0.35s"
+               values="0;-120;40;0" fill="freeze"/>
+    </path>
+  </g>
+
+</g>
+
+
+
+
+
+  </g>
+  <text style="font:700 80px&quot;Orbitron&quot;,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,Arial,sans-serif;fill:#e0aaff;letter-spacing:2px" transform="translate(360 120)">zero-rehq</text>
+  <text y="70" style="font:400 22px&quot;Inter&quot;,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,Arial,sans-serif;fill:#c77dff;opacity:.9" transform="translate(360 120)">architectures • realtime • iot • performance</text>
+</svg>
