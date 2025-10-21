@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { useParallax } from "@/hooks/use-parallax"
@@ -26,7 +24,7 @@ export function Hero() {
         transformOrigin: "center center",
       }}
     >
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden w-full">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
