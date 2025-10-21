@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout -b tanstack-migration)",
+      "Bash(npm uninstall next)",
+      "Bash(npm install -D vite @vitejs/plugin-react vite-tsconfig-paths)",
+      "Bash(npm uninstall next --legacy-peer-deps)",
+      "Bash(npm install -D vite @vitejs/plugin-react vite-tsconfig-paths --legacy-peer-deps)",
+      "Bash(pnpm remove next)",
+      "Bash(pnpm add -D @tanstack/router-plugin @tanstack/router-devtools)",
+      "Bash(pnpm add @tanstack/react-router)",
+      "Bash(git add -A)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
