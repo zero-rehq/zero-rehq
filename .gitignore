@@ -3,9 +3,10 @@
 # dependencies
 /node_modules
 
-# next.js
-/.next/
-/out/
+# vite
+/dist
+/dist-ssr
+*.local
 
 # production
 /build
@@ -24,4 +25,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# tanstack router
+/src/routeTree.gen.ts
