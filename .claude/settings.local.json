@@ -9,7 +9,8 @@
       "Bash(pnpm remove next)",
       "Bash(pnpm add -D @tanstack/router-plugin @tanstack/router-devtools)",
       "Bash(pnpm add @tanstack/react-router)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(ls -la *.{config.js,config.mjs,config.ts})"
     ],
     "deny": [],
     "ask": []
