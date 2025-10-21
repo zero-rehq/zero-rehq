@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Bruno Murua | Full Stack Developer",
   description:
     "Full Stack Developer especializado en arquitecturas distribuidas, microservicios e IoT. Barcelona, España.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
