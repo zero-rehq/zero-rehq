@@ -75,7 +75,7 @@ export function Hero() {
                 className="border-primary/50 hover:bg-primary/10 bg-transparent"
                 asChild
               >
-                <a href="https://github.com/brunomurua" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/zero-rehq" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>

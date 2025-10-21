@@ -86,7 +86,7 @@ export function Contact() {
               className="border-primary/50 hover:bg-primary/10 bg-transparent"
               asChild
             >
-              <a href="https://github.com/brunomurua" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/zero-rehq" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
               </a>
