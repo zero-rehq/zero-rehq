@@ -1,8 +1,7 @@
-"use client"
-
+import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Briefcase, Calendar } from "lucide-react"
+import { Briefcase, Calendar, ChevronDown, ChevronUp } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const experiences = [
@@ -69,23 +68,28 @@ function ExperienceCard({
   index: number
   isParentVisible: boolean
 }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const PREVIEW_COUNT = 3
+  const hasMore = exp.achievements.length > PREVIEW_COUNT
+  const displayedAchievements = isExpanded ? exp.achievements : exp.achievements.slice(0, PREVIEW_COUNT)
+
   return (
     <Card
-      className={`p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:card-glow transition-all duration-1000 ${
+      className={`p-5 md:p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:card-glow transition-all duration-1000 ${
         isParentVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
       }`}
       style={{ transitionDelay: `${index * 200 + 200}ms` }}
     >
-      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-3">
         <div className="flex-1">
           <div className="flex items-start gap-3 mb-2">
             <Briefcase className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">{exp.company}</h3>
-              <p className="text-muted-foreground">{exp.location}</p>
+              <p className="text-muted-foreground text-sm">{exp.location}</p>
             </div>
           </div>
-          <p className="text-lg font-semibold text-primary ml-9">{exp.role}</p>
+          <p className="text-base md:text-lg font-semibold text-primary ml-9">{exp.role}</p>
         </div>
 
         <div className="flex items-center gap-2 text-muted-foreground ml-9 md:ml-0">
@@ -94,18 +98,37 @@ function ExperienceCard({
         </div>
       </div>
 
-      <ul className="space-y-2 mb-6 ml-9">
-        {exp.achievements.map((achievement, i) => (
-          <li key={i} className="text-card-foreground leading-relaxed flex gap-2">
+      <ul className="space-y-1.5 mb-4 ml-9">
+        {displayedAchievements.map((achievement, i) => (
+          <li key={i} className="text-card-foreground leading-relaxed flex gap-2 text-sm md:text-base">
             <span className="text-primary mt-1.5">▸</span>
             <span>{achievement}</span>
           </li>
         ))}
       </ul>
 
+      {hasMore && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="ml-9 mb-4 flex items-center gap-1 text-sm text-primary hover:text-primary/80 transition-colors"
+        >
+          {isExpanded ? (
+            <>
+              <ChevronUp className="h-4 w-4" />
+              Ver menos
+            </>
+          ) : (
+            <>
+              <ChevronDown className="h-4 w-4" />
+              Ver más (+{exp.achievements.length - PREVIEW_COUNT})
+            </>
+          )}
+        </button>
+      )}
+
       <div className="flex flex-wrap gap-2 ml-9">
         {exp.tags.map((tag, i) => (
-          <Badge key={i} variant="secondary" className="bg-secondary/20 text-secondary-foreground border-secondary/30">
+          <Badge key={i} variant="secondary" className="bg-secondary/20 text-secondary-foreground border-secondary/30 text-xs">
             {tag}
           </Badge>
         ))}
